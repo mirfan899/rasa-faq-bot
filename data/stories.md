@@ -1,46 +1,95 @@
+## welcome
+* welcome
+    - utter_welcome
 ## greet_part
 * greet
    - utter_greet
-   - utter_ask_need_help
 > greet_part
 
 ## qa_happy_1
 > greet_part
 * faq
    - action_get_answer
-* affirm
-   - utter_ask_need_more_help
-* deny 
-   - utter_goodbye
-
-## bye
-* goodbye
-   - utter_goodbye
-
-## qa_happy_2
-> greet_part
-* faq
-   - action_get_answer
-* affirm
-   - utter_ask_need_more_help
-* faq
-   - action_get_answer
-* affirm
-   - utter_ask_need_more_help
-* deny 
+   - utter_helpful
+* affirm{"accept": "yes"}
    - utter_goodbye
 
 ## qa_happy_3
-* faq
-   - action_get_answer
-* affirm
-   - utter_ask_need_more_help
-* deny 
-   - utter_goodbye
-
-## qa_bad_1
 > greet_part
 * faq
    - action_get_answer
-* deny
+   - utter_helpful
+* affirm{"accept": "yes"}
+   - utter_goodbye
+
+## qa_happy_4
+> greet_part
+* faq
+   - action_get_answer
+   - utter_helpful
+* deny{"reject":"No"}
+   - utter_not_helpful
+* faq
+   - action_get_answer
+   - utter_helpful
+* affirm{"accept": "yes"}
+   - utter_goodbye
+
+## qa_not_happy_2
+> greet_part
+* faq
+   - action_get_answer
+   - utter_helpful
+* deny{"reject":"No"}
+   - utter_not_helpful
+* faq
+   - action_get_answer
+   - utter_helpful
+* deny{"reject":"No"}
    - utter_sorry
+
+## qa_not_happy_2
+> greet_part
+* faq
+   - action_get_answer
+   - utter_helpful
+* deny{"reject":"No"}
+   - utter_not_helpful
+* faq
+   - action_get_answer
+   - utter_helpful
+* deny{"reject":"No"}
+   - utter_sorry
+
+## qa_not_happy_2
+> greet_part
+* faq
+   - action_get_answer
+   - utter_helpful
+* deny{"reject":"No"}
+   - utter_not_helpful
+* faq
+   - action_get_answer
+   - utter_helpful
+* deny{"reject":"No"}
+   - utter_sorry
+
+## New Story
+
+* greet
+    - utter_greet
+* faq
+    - action_get_answer
+    - utter_helpful
+* affirm{"accept": "yes"}
+    - utter_goodbye
+
+## New Story
+
+* greet
+    - utter_greet
+* faq
+    - action_get_answer
+    - utter_helpful
+* affirm{"accept": "yes"}
+    - utter_goodbye

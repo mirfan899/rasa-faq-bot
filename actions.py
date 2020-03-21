@@ -20,7 +20,7 @@ class ActionGetFAQAnswer(Action):
     def __init__(self):
         super(ActionGetFAQAnswer, self).__init__()
         self.bc = BertClient()
-        self.faq_data = json.load(open("./data/nlu/faq.json", "rt", encoding="utf-8"))
+        self.faq_data = json.load(open("./data/nlu/qa.json", "r", encoding="utf-8"))
         self.standard_questions_encoder = np.load("./data/standard_questions.npy")
         self.standard_questions_encoder_len = np.load("./data/standard_questions_len.npy")
         print(self.standard_questions_encoder.shape)
@@ -43,11 +43,8 @@ class ActionGetFAQAnswer(Action):
         if float(score) > 0.93:
             response = self.faq_data[most_similar_id]['a']
             dispatcher.utter_message(response)
-            dispatcher.utter_message("Problem solved?")
         else:
-            response = "Sorry, this question is beyond my ability..."
-            dispatcher.utter_message(response)
-            dispatcher.utter_message("Sorry, I can't answer your question. You can dial the manual serviece...")
+            dispatcher.utter_message(template="utter_not_helpful")
         return []
 
 
