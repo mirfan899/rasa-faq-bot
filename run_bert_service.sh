@@ -1,3 +1,6 @@
+#!/bin/bash
+source .bert/bin/activate
+
 bert-serving-start \
     -pooling_layer -4 -3 -2 -1 \
     -model_dir=BERT_ENGLISH_MODEL_DIR \
