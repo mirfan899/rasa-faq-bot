@@ -1,5 +1,1 @@
-rasa==1.8.1
-rasa-sdk==1.8.1
-rasa-x==0.26.1
-spacy==2.2.4
-rasa-x==0.26.1 --extra-index-url https://pypi.rasa.com/simple
+tensorflow-addons

@@ -28,3 +28,9 @@ python -m rasa run --enable-api --cors "*"
 ```shell script
 floyd run --gpu --env tensorflow-2.1 "bash setup.sh && python -m rasa train"
 ```
+
+for pyenv
+```shell script
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+```
