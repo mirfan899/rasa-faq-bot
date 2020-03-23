@@ -1,9 +1,9 @@
 #!/bin/bash
 pip3.7 install --upgrade pip
-pip install rasa-x==0.26.1 --extra-index-url https://pypi.rasa.com/simple
+pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
 pip install bert-serving-client
 pip install bert-serving-server
-pip install rasa==1.8.1
+pip install rasa
 pip install spacy
 pip install tensorflow-addons
 python -m spacy download en_core_web_sm
