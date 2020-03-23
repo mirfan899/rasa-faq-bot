@@ -23,3 +23,9 @@ launch model in background with cors
 ```shell script
 python -m rasa run --enable-api --cors "*"
 ```
+
+### floyd shit
+```shell script
+floyd run --gpu --env tensorflow-2.1 "bash setup.sh"
+floyd run --gpu --env tensorflow-2.1 "python -m rasa train"
+```
