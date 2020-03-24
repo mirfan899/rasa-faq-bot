@@ -27,9 +27,16 @@ python -m rasa run --enable-api --cors "*"
 ### floyd shit
 ```shell script
 floyd run --gpu --env tensorflow-2.1 "bash setup.sh && python -m rasa train"
+floyd run --gpu --env tensorflow-2.1 "bash setup.sh && python -m rasa run" --mode serve
 floyd run --gpu --env tensorflow-2.0 "bash setup.sh && python -m rasa train"
+floyd run --gpu --env tensorflow-2.0 "bash setup.sh && python -m rasa run"
+floyd run --gpu --env tensorflow-2.0 "bash setup.sh && python -m rasa run" --mode serve
 ```
 
+## deploy to floyd
+```shell script
+
+```
 for pyenv
 ```shell script
 eval "$(pyenv init -)"
