@@ -31,11 +31,12 @@ floyd run --gpu --env tensorflow-2.1 "bash setup.sh && python -m rasa run" --mod
 floyd run --gpu --env tensorflow-2.0 "bash setup.sh && python -m rasa train"
 floyd run --gpu --env tensorflow-2.0 "bash setup.sh && python -m rasa run"
 floyd run --gpu --env tensorflow-2.0 "bash setup.sh && python -m rasa run" --mode serve
+floyd run --gpu --env tensorflow-2.0 --mode serve
 ```
 
 ## deploy to floyd
 ```shell script
-
+floyd run --mode serve
 ```
 for pyenv
 ```shell script
